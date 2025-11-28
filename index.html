@@ -18,7 +18,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     
     <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide-react/dist/lucide-react.umd.js"></script>
+
     
     <style>
         @keyframes blob {
@@ -52,7 +53,7 @@
             Zap, Shield, Database, Clock, TrendingUp, 
             Code, ExternalLink, Package, Star, Github, 
             BookOpen, Sparkles 
-        } = lucide;
+        } = lucideReact;
 
         function NexusAPILanding() {
             const [products, setProducts] = useState([]);
@@ -61,7 +62,7 @@
             const [stats, setStats] = useState({ totalProducts: 0, categories: 0, brands: 0 });
 
             // IMPORTANT: Update this to your Render backend URL
-            const API_URL = 'https://your-app-name.onrender.com';
+            const API_URL = 'http://127.0.0.1:8000';
 
             useEffect(() => {
                 const fetchProducts = async () => {
